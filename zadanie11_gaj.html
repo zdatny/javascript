@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <body>
+ <div style="color:green;font-size:50px;">
+ <script language="JavaScript">
+// Filip Gajewski 3F 29.09.2025
+// Zadanie 11
+ var D1_gaj=prompt("Data1=","");
+ var D2_gaj=prompt("Data2=","");
+ var sekund;
+ var a=parseFloat(D1_gaj);
+ var b=parseFloat(D2_gaj);
+ sekund=(a-b)*24*60*60;
+ document.write("Ilość sekund między dniami "+a+" i "+b+" = "+sekund+"<br>");
+ function okno_zamknij_gajewski()
+ {
+ window.close()
+ }
+ </script>
+ </div>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_gajewski()"/>
+ </body>
+ </html>
