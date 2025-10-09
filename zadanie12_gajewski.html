@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Filip Gajewski - Zadanie 12</title>
+</head>
+<body>
+<div style="color:green;font-size:59px;"> 
+<script language="JavaScript">
+
+var D1_gaj = prompt("Podaj pierwszy dzień stycznia (D1):","");
+var G1_gaj = prompt("Podaj pierwszą godzinę (G1):","");
+var D2_gaj = prompt("Podaj drugi dzień stycznia (D2):","");
+var G2_gaj = prompt("Podaj drugą godzinę (G2):","");
+
+var D1 = parseFloat(D1_gaj);
+var G1 = parseFloat(G1_gaj);
+var D2 = parseFloat(D2_gaj);
+var G2 = parseFloat(G2_gaj);
+
+var sekundy = ((D1 * 24 + G1) - (D2 * 24 + G2)) * 3600;
+
+document.write("Ilość sekund między dniem " + D1 + " godz. " + G1 + 
+" a dniem " + D2 + " godz. " + G2 + " wynosi: " + sekundy + " sekund<br>");
+
+function okno_zamknij_gajewski() {
+  window.close();
+}
+</script>
+</div>
+<br>
+<input type="button" value="Zamknij okno" onclick="okno_zamknij_gajewski()"/>
+</body>
+</html>
