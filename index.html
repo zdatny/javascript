@@ -57,6 +57,15 @@ function WinOpen_z11_kod() {
   window.open("zadanie11_gaj_KOD.html","okienko_z11_kod","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
 }
 
+
+function WinOpen_z11() {
+  window.open("zadanie12_gaj.html","okienko_z12","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+}
+  
+  function WinOpen_z12_kod() {
+  window.open("zadanie12_gaj_KOD.html","okienko_z12_kod","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+}
+
 function okno_zamknij() {
   window.close()
 }
@@ -100,11 +109,18 @@ function okno_zamknij() {
 <br><br>
 <HR SIZE=4 WIDTH=50% ALIGN=LEFT COLOR=red>
 
+<input type="button" name="z12" value="zadanie12_gajewski" onclick="WinOpen_z12(' ')">
+<input type="button" name="z12_kod" value="gajewski-Zadanie12-KOD" onclick="WinOpen_z12_kod(' ')"> 
+<br><br>
+<HR SIZE=4 WIDTH=50% ALIGN=LEFT COLOR=red>
+ 
+
 <br><br>
 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
 </form>
 </body>
 </html>
+
 
 
 
