@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Użycie funkcji</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="color:navy;font-size:50px;">
+        <script>
+            var a = parseFloat(prompt("a=", ""));
+            var b = parseFloat(prompt("b=", ""));
+
+            function suma_gaj(a, b) {
+                return a + b;
+            }
+            function odejmowanie_gaj(a, b) {
+                return a - b;
+            }
+            function mnozenie_gaj(a, b) {
+                return a * b;
+            }
+            function suma_od_kwadratu_gaj(a) {
+                
+                return a * a;
+            }
+            function reszta_z_dzielenia_a_przez_b_gaj(a, b) {
+                return a % b;
+            }
+
+            document.write("suma=" + suma_gaj(a, b) + "<br>");
+            document.write("różnica=" + odejmowanie_gaj(a, b) + "<br>");
+            document.write("iloczyn=" + mnozenie_gaj(a, b) + "<br>");
+            document.write("kwadrat a=" + suma_od_kwadratu_gaj(a) + "<br>");
+            document.write("reszta z dzielenia a przez b=" + reszta_z_dzielenia_a_przez_b_gaj(a, b) + "<br>");
+        </script>
+    </div>
+</body>
+</html>
