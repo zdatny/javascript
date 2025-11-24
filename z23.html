@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+ Drabina i kąt
+</title>
+<script>
+function Drabina(d, x) {
+    d = parseFloat(d);
+    x = parseFloat(x);
+    if (isNaN(d) || isNaN(x)) {
+        alert("Wprowadź wartości liczbowe dla D i X!");
+        return;
+    }
+    var Drabina_w = Math.sqrt(d * d + x * x);
+    document.getElementsByName('drab')[0].value = Drabina_w.toFixed(2);
+    alert("Drabina = " + Drabina_w.toFixed(2) + " cm");
+    document.getElementById("pokaz1").innerHTML = "Drabina = " + Drabina_w.toFixed(2) + " cm" + "<br>";
+}
+
+function Alfa(d, x) {
+    d = parseFloat(d);
+    x = parseFloat(x);
+    if (isNaN(d) || isNaN(x)) {
+        alert("Wprowadź wartości liczbowe dla D i X!");
+        return;
+    }
+    var Drabina_w = Math.sqrt(d * d + x * x);
+    var sinA = d / Drabina_w;
+    var aRad = Math.asin(sinA);
+    var aDeg = aRad * (180 / Math.PI);
+    document.getElementsByName('alfa')[0].value = aDeg.toFixed(2);
+    alert("Alfa = " + aDeg.toFixed(2));
+    document.getElementById("pokaz2").innerHTML = "Alfa = " + aDeg.toFixed(2) + "<br>";
+}
+
+function okno_zamknij_gajewski() {
+    window.close();
+}
+</script>
+</head>
+<body>
+Obliczanie Drabina i kąt
+<br><br>
+<form name="formularz" action=""
+onsubmit="Drabina(this.bok_d.value,this.bok_x.value); Alfa(this.bok_d.value,this.bok_x.value); return false;">
+Podaj D=
+<input size="6" name="bok_d">
+Podaj X=
+<input size="6" name="bok_x">
+<br><br>
+<input type="submit" value="oblicz">
+Drabina=
+<input size="6" name="drab" readonly>
+Alfa=
+<input size="6" name="alfa" readonly>
+</form>
+<table>
+<tr>
+<td id="pokaz1"></td>
+</tr>
+<tr>
+<td id="pokaz2"></td>
+</tr>
+</table>
+<input type="button" value="zamknij okno"
+onclick="okno_zamknij_gajewski()"/>
+</body>
+</html>
