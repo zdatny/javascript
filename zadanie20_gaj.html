@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 20 </title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <h1>Trójkąt - długości boków</h1>
+  <form>
+    Punkt A: x = <input type="text" id="xa_gajewski" value="0">
+    y = <input type="text" id="ya_gajewski" value="0"><br><br>
+    Punkt B: x = <input type="text" id="xb_gajewski" value="3">
+    y = <input type="text" id="yb_gajewski" value="0"><br><br>
+    Punkt C: x = <input type="text" id="xc_gajewski" value="0">
+    y = <input type="text" id="yc_gajewski" value="4"><br><br>
+  </form>
+  <input type="button" value="Oblicz długości boków" onclick="obliczBoki()">
+  <div style="color:blue; font-size:30px;" id="wyniki"></div>
+  <script>
+    function AB_gaj(xa, ya, xb, yb) {
+      return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+    }
+    function BC_gaj(xb, yb, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+    }
+    function AC_gaj(xa, ya, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+    }
+    function obliczBoki() {
+      var xa_gajewski = parseFloat(document.getElementById('xa_gajewski').value);
+      var ya_gajewski = parseFloat(document.getElementById('ya_gajewski').value);
+      var xb_gajewski = parseFloat(document.getElementById('xb_gajewski').value);
+      var yb_gajewski = parseFloat(document.getElementById('yb_gajewski').value);
+      var xc_gajewski = parseFloat(document.getElementById('xc_gajewski').value);
+      var yc_gajewski = parseFloat(document.getElementById('yc_gajewski').value);
+
+      var ab = AB_gaj(xa_gajewski, ya_gajewski, xb_gajewski, yb_gajewski);
+      var bc = BC_gaj(xb_gajewski, yb_gajewski, xc_gajewski, yc_gajewski);
+      var ac = AC_gaj(xa_gajewski, ya_gajewski, xc_gajewski, yc_gajewski);
+
+      document.getElementById('wyniki').innerHTML =
+        "AB = " + ab.toFixed(2) + " <br>BC = " + bc.toFixed(2) + " <br>AC = " + ac.toFixed(2);
+    }
+  </script>
+</body>
+</html>
