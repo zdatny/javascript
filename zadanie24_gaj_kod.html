@@ -1,0 +1,60 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24">
+<!DOCTYPE html>
+ <head>
+ <title> cwiczenie 24 </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+ <div style="color:blue;background-color:grey;font-size:50px;">
+ <script language="JavaScript">
+ var x1_gaj=parseFloat(prompt("x1=",""));
+ var x2_gaj=parseFloat(prompt("x2=",""));
+
+ function y1_gaj(x1) {
+ return 3 * Math.pow(x1_gaj, 6/8);
+}
+
+function x1_rad(x1) {
+var st_gaj=x1_gaj;
+return (st_gaj * Math.PI) / 180;
+}
+
+function y2_gaj(x1){
+var st_gaj=x1_gaj;
+var rad_gaj=(st_gaj * Math.PI) / 180;
+return 2 * Math.cos(rad_gaj) + 3 * Math.sin(rad_gaj);
+}
+
+function y3_gaj(x1,x2) {
+var x1_5= Math.pow(x1_gaj, 5);
+var x2_4= Math.pow(x2_gaj, 4);
+var x1_x2= Math.abs(x1_gaj - x2_gaj);
+var pierwiastek= Math.cbrt(x1_5 + 2 * x2_4);
+return pierwiastek * x1_x2;
+}
+
+var y1_wyn =y1_gaj(x1_gaj);
+var y2_wyn =y2_gaj(x1_gaj);
+var y3_wyn =y3_gaj(x1_gaj,x2_gaj);
+var x1_radi= x1_rad(x1_gaj);
+
+document.write("x1= " +x1_gaj+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"); 
+document.write("x2= " +x2_gaj+"<br>");
+document.write("x1(s)= " +x1_gaj+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+document.write("x1(r)= " +x1_radi.toFixed(2)+"<br>");
+document.write("y1= " +y1_wyn.toFixed(2)+"<br>");
+document.write("y2= " +y2_wyn.toFixed(2)+"<br>");
+document.write("y3= " +y3_wyn.toFixed(2)+"<br>");
+
+</script>
+</div>
+</body>
+</html>
+
+</textarea>
+</body>
+
+</html>
+
