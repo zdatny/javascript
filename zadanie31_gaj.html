@@ -1,0 +1,32 @@
+<html>
+ <head>
+ <script type="text/javascript">
+
+ var pociag = {
+ile_wagonow: '6',
+firma_produkująca: 'PESA',
+liczba_p: '450',
+pociag_pokaz_gajewski: function ()
+{
+ document.write(this.ile_wagonow + ' ' + this.firma_produkująca)
+ }
+}
+pociag.pociag_pokaz_gajewski();
+pociag.rok_produkcji=1998;
+pociag.pociag_wypisz_gajewski=function() {alert('rok produkcji: ' + this.rok_produkcji + 'rok')}
+pociag.pociag_wypisz_gajewski();
+ </script>
+ </head>
+<body>
+<br>
+ Programowanie obiektowe. <br>
+ Obiekt to pociąg<br>
+ Pola:<br>
+ liczba wagonów<br>
+ firma produkująca<br>
+ liczba pasażerów<br>
+ metoda: pociag_pokaz_gajewski<br>
+ nowe pole to rok produkcji <br>
+ nowa metoda to pociag_wypisz_gajewski();<br>
+</body>
+</html>
