@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+
+<h1>1. W jaki sposób można określić właściwość danego obiektu?</h1>
+<p>
+Właściwość obiektu można określić na dwa sposoby:<br>
+auto.marka = "Opel";<br>
+auto["rok"] = 1996;
+</p>
+
+<h1>2. W jaki sposób można odwołać się do pól i metod?</h1>
+<p>
+Do pól i metod odwołujemy się za pomocą nazwy obiektu i kropki:<br>
+console.log(auto.marka);<br>
+auto.jedz();
+</p>
+
+<h1>3. Cechy charakterystyczne konstruktora</h1>
+<p>
+Konstruktor:
+<ul>
+    <li>wywoływany jest automatycznie</li>
+    <li>nie zwraca żadnej wartości</li>
+    <li>może przyjmować argumenty</li>
+    <li>do tworzenia obiektu używa się słowa new</li>
+</ul>
+</p>
+
+<h1>4. Przykład obiektu – trzy pola i jedna metoda</h1>
+<p>
+var osoba = { <br>
+imie: "Jan",<br>
+nazwisko: "Kowalski",<br>
+zawod: "piekarz",<br>
+wyswietl: function() {<br>
+document.write(this.imie + " " + this.nazwisko);<br>
+}<br>
+}
+</p>
+
+<h1>5. Znaczenie słowa this</h1>
+<p>
+Słowo <b>this</b> odnosi się do aktualnego obiektu i umożliwia odwołanie się do jego pól oraz metod.
+</p>
+
+<h1>6. Konstruktor w JavaScript</h1>
+<p>
+function Klient(nazwisko, imie, zawod) {<br>
+this.nazwisko = nazwisko;<br>
+this.imie = imie;<br>
+this.zawod = zawod;<br>
+}
+</p>
+
+<h1>7. Znaczenie słowa kluczowego new</h1>
+<p>
+Słowo <b>new</b> służy do tworzenia nowego obiektu na podstawie konstruktora:<br>
+var osoba1 = new Klient("Kowalski", "Jan", "kierowca");
+</p>
+
+<h1>8. Znaczenie słowa prototype</h1>
+<p>
+<b>Prototype pozwala dodawać metody i właściwości wspólne dla wszystkich obiektów utworzonych na
+podstawie tego samego konstruktora.</b><br><br>
+
+Klient.prototype.wypisz = function() {<br>
+document.write(this.imie + " " + this.nazwisko);<br>
+}
+</p>
+
+</body>
+</html>
