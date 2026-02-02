@@ -1,0 +1,38 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24">
+<html>
+ <head>
+ <script type="text/javascript">
+ function pociag(ile_wagonow_k,firma_produkujaca_k,liczba_pasazerow_k,kolor_k)//początek konstruktora
+{
+this.ile_wagonow=ile_wagonow_k;
+this.firma_produkujaca=firma_produkujaca_k;
+this.liczba_pasazerow=liczba_pasazerow_k;
+this.kolor=kolor_k;
+}//koniec konstruktora
+ pociag.prototype.wypisz_gajewski = function () //definicja metody
+ {
+ alert(this.ile_wagonow + ' ' + this.firma_produkujaca+ ' ' + this.liczba_pasazerow+ ' ' +this.kolor);
+ };
+var pociag1 = new pociag("7", "PESA", "130", "Niebieski"); 
+var pociag2 = new pociag('3', 'Stadler', '70', 'Czerwony');
+var pociag3 = new pociag('10','Alstom', '510 ', 'Zielony');
+pociag1.wypisz_gajewski();
+pociag2.wypisz_gajewski();
+pociag3.wypisz_gajewski();
+ document.write("dostęp do właściwości"+"<br>");
+ document.write("pociag pierwszy"+" "+pociag1.ile_wagonow+" "+pociag1.firma_produkujaca+" "+pociag1.liczba_pasazerow+" "+pociag1.kolor+"<p>");
+document.write("pociag drugi"+" "+pociag2.ile_wagonow+" "+pociag2.firma_produkujaca+" "+pociag2.liczba_pasazerow+" "+pociag2.kolor+"<p>");
+document.write("pociag trzeci"+" "+pociag3.ile_wagonow+" "+pociag3.firma_produkujaca+" "+pociag3.liczba_pasazerow+" "+pociag3.kolor+"<p>");
+ </script>
+ </head>
+<body>
+<br>
+ programowanie obiektowe
+</body>
+</html>
+</textarea>
+</body>
+
+</html>
