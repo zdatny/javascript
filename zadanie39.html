@@ -1,0 +1,18 @@
+<html>
+<body>
+<p style="color:green;"> MENU </p>
+<p style="color:red;"> kolor czerwony </p>
+<p style="color:blue;"> kolor niebieski </p>
+</html>
+</body>
+<input type="button" name="gajewski" value="Oblicz" onclick="fun_gaj()" />
+ <script>
+ function fun_gaj() {
+ var x_gaj = prompt("Podaj kolor", "");
+ if(x_gaj == 1 || x_gaj.toLowerCase() == "czerwony") {
+document.write('<h1 style="color:red;">wczytałeś kolor czerwony</h1><br />'); }
+ else if(x_gaj == 2 || x_gaj.toLowerCase() == "niebieski") {
+document.write('<h2 style="color:blue;"> wczytałeś kolor niebieski</h2><br />');
+}
+}
+</script>
