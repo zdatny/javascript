@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 38 - Filip Gajewski</title>
+</head>
+
+<body style="background-color:silver;">
+
+<script>
+
+// ===== DANE =====
+var imie_gaj = "Filip";
+var nazwisko_gaj = "Gajewski";
+var dzien_gaj = 29;
+var numer_gaj = 6;
+
+// ===== OBLICZENIA =====
+var liczba1_gaj = imie_gaj.length;          
+var liczba2_gaj = liczba1_gaj + 7;          
+var liczba3_gaj = nazwisko_gaj.length;      
+var liczba4_gaj = liczba3_gaj + 4;          
+
+var wielkosc_gaj = 40 + (numer_gaj % 7);    
+document.write("<div style='color:green; font-size:"+wielkosc_gaj+"px;'>");
+document.write(nazwisko_gaj + " " + imie_gaj + "<br>");
+document.write("liczba1 = " + liczba1_gaj + "<br>");
+document.write("liczba2 = " + liczba2_gaj + "<br>");
+document.write("liczba3 = " + liczba3_gaj + "<br>");
+document.write("liczba4 = " + liczba4_gaj + "<br>");
+document.write("</div><br><br>");
+
+document.write("<div style='color:red; font-size:"+wielkosc_gaj+"px;'>");
+document.write("MENU:<br>");
+document.write("5 - Teoria operatorów logicznych<br>");
+document.write("28 - Sprawdź czy liczba należy do przedziału ("+liczba1_gaj+" ; "+liczba2_gaj+"]<br>");
+document.write("79 - Sprawdź czy liczba należy do przedziału (-∞ ; "+liczba1_gaj+") lub ["+liczba2_gaj+" ; +∞)<br>");
+document.write("</div><br>");
+
+var opcja_gaj = prompt("Podaj numer opcji:");
+if(opcja_gaj == 5)
+{
+ document.write("<font color=blue size=7>Jesteś w opcji 5 → teoria</font><br>");
+ document.write("&& - i<br>");
+ document.write("|| - lub<br>");
+ document.write("! - zaprzeczenie<br>");
+}
+if(opcja_gaj == 28)
+{
+ var liczba_gaj = prompt("Podaj liczbę:");
+ if((liczba_gaj > liczba1_gaj) && (liczba_gaj <= liczba2_gaj))
+  document.write("<font color=green size=6>Liczba należy do przedziału</font>");
+ else
+  document.write("<font color=red size=6>Liczba NIE należy do przedziału</font>");
+}
+if(opcja_gaj == 79)
+{
+ var liczba2_gaj = prompt("Podaj liczbę:");
+ if((liczba2_gaj < liczba1_gaj) || (liczba2_gaj >= liczba2_gaj))
+  document.write("<font color=green size=6>Liczba należy do przedziału</font>");
+ else
+  document.write("<font color=red size=6>Liczba NIE należy do przedziału</font>");
+}
+if((opcja_gaj!=5)&&(opcja_gaj!=28)&&(opcja_gaj!=79))
+{
+ document.write("<font color=red size=7>Nie ma takiej opcji</font>");
+}
+
+</script>
+
+</body>
+</html>
