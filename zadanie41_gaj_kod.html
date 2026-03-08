@@ -1,59 +1,150 @@
-<html>
- <body>
- <textarea cols="90" rows="24">
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>Zadanie41</title>
+<title>Zadanie JavaScript</title>
+<meta charset="utf-8">
+<style>
+h1 { text-transform: uppercase; }
+</style>
 </head>
 <body>
-<h1> pętla for </h1>
-<p>Konstrukcja: for(i=1;i<=10;i++)</p>
-<p>Opis:< Pętla wykonuje się określoną liczbę razy.</p>
-<p>Schemat blokowy: start → warunek → wykonaj instrukcje → zwiększ licznik</p>
-
-<div style="color:red;font-size:50px;">
+<h1>Proste działania</h1>
+<label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
+<br><br>
+<label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
+<br><br>
+<input type="button" value="DODAWANIE" onclick="suma_gaj()">
+<input type="button" value="ODEJMOWANIE" onclick="roznica_gaj()">
+<input type="button" value="MNOŻENIE" onclick="iloczyn_gaj()">
+<input type="button" value="DZIELENIE" onclick="iloraz_gaj()">
+<input type="button" value="TEORIA-Gajewski" onclick="teoria_gaj()">
+<div id="wynik" style="margin-top:20px;"></div>
 <script>
-for(i_gaj=1;i_gaj<=10;i_gaj++)
+function suma_gaj()
 {
-document.write("wyświetlam "+i_gaj+" raz Gajewski"+"<br>");
-}
-</script>
-</div>
-<h2> pętla while </h2>
-<p>Konstrukcja: while(warunek)</p>
-<p>Opis: Najpierw sprawdzany jest warunek, potem wykonywane są instrukcje.</p>
-<p>chemat blokowy: start → sprawdź warunek → wykonaj instrukcje</p>
-
-<div style="color:blue;font-size:40px;">
-<script>
-var i_gaj=1;
-while(i_gaj<=10)
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
 {
-document.write("while "+i_gaj+" raz Gajewski"+"<br>");
-i_gaj++;
-}
-</script>
-</div>
-<h3> Pętla do while </h3>
-<p>Konstrukcja: do...while(warunek)</p>
-<p>Opis: Instrukcja wykona się przynajmniej jeden raz, bo warunek sprawdzany jest na końcu.</p>
-<p>Schemat blokowy: start → wykonaj instrukcje → sprawdź warunek</p>
-
-<div style="color:green;font-size:40px;">
-<script>
-var i_gaj=1;
-do
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
 {
-document.write("do while "+i_gaj+" raz Gajewski"+"<br>");
-i_kow++;
+a = parseFloat(a);
+b = parseFloat(b);
+var suma = a + b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
 }
-while(i_gaj<=10);
-</script>
-</div>
+//alert(a);
+//console.log(a);
+}
+function roznica_gaj()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var roznica = a - b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica;
+}
+}
+function iloczyn_gaj()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var iloczyn = a * b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn;
+}
+}
+function iloraz_gaj()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+if (b == 0)
+{
+document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+}
+else
+{
+var iloraz = a / b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz;
+}
+}
+}
+function teoria_gaj()
+{
+document.write("<font color=green size=4>pierwsza linia teorii</font>"+"<br>");
+document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>label for=</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>");
+document.write("<font color=red size=4>Podaj pierwszą liczbę:</font>");
+document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>/label</font>"+"<font color=red size=4>&gt;</font>");
+document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>input type=</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>number</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4> id=</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>"+"<br>");
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
+document.write("<font color=red size=4>wykonanie numerycznego pola formularza z opisem 'Podaj pierwszą liczbę:' a nazwa pola to 'a' </font>"+"<br>");
+document.write("<font color=green size=4>druga linia teorii</font>"+"<br>");
+document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>input type=</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>button</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>");
+document.write("<font color=red size=4>value=</font>");
+document.write("<font color=red size=4>&quot;</font>"+"<font color=red size=4>DODAWANIE</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4> </font>"+"<font color=red size=4>onclick=</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>suma()</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4></font>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4></font>"+"<font color=red size=4>&gt;</font>"+"<br>");
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
+document.write("<font color=red size=4>Wykonanie przycisku o nazwie DODAWANIE i z takim samym napisem, kliknięcie myszką uruchamia funkcję suma(). </font>"+"<br>");
+document.write("<font color=green size=4>Trzecia linia teorii</font>"+"<br>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4>var a =</font>"+"<font color=red size=4></font>");
+document.write("<font color=red size=4> document.getElementById</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>");
+document.write("<font color=red size=4>(</font>");
+document.write("<font color=red size=4>&quot;</font>"+"<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4>)</font>"+"<font color=red size=4></font>");
+document.write("<font color=red size=4>.value;</font>"+"<font color=red size=4></font>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4></font>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4></font>"+"<font color=red size=4></font>"+"<br>");
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
+document.write("<font color=red size=4>Wpisanie do zmiennej 'a' wartości z elementu o Id 'a' (zbieżność nazw). </font>"+"<br>");
+document.write("<font color=green size=4>Czwarta linia teorii</font>"+"<br>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4>if (a==</font>"+"<font color=red size=4>&quot;&quot; </font>");
+document.write("<font color=red size=4> | | b == </font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>)</font>"+"<font color=red size=4></font>"+"<font color=red size=4></font>"+"<br>");
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
+document.write("<font color=red size=4>sprawdzenie czy pola 'a' lub 'b' są puste. </font>"+"<br>");
+document.write("<font color=green size=4>Piąta linia teorii</font>"+"<br>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4>document.getElementById(</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>wynik</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4></font>");
+document.write("<font color=red size=4>)</font>");
+document.write("<font color=red size=4>.innerHTML = </font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>Wynik działania wynosi: </font>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4></font>");
+document.write("<font color=red size=4> + suma;</font>"+"<font color=red size=4></font>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4></font>");
+document.write("<font color=red size=4></font>"+"<font color=red size=4></font>"+"<font color=red size=4></font>"+"<br>");
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
+document.write("<font color=red size=4>pobranie wartości Id o nazwie 'wynik' i wyprowadzenie w oknie przeglądarki tekstu 'Wynik działania wynosi: ' oraz wartości zmiennej suma;</font>"+"<br>");
 
+}
+
+</script>
 </body>
 </html>
-</textarea>
- </body>
-</html>
+<!-- GAJEWSKI Z41_JS_KOD -->
