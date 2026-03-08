@@ -1,149 +1,39 @@
+
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl-PL">
 <head>
-<title>Zadanie JavaScript</title>
-<meta charset="utf-8">
-<style>
-h1 { text-transform: uppercase; }
-</style>
+    <meta charset="UTF-8">
+    <title>Z40_JS</title> 
 </head>
 <body>
-<h1>Proste działania</h1>
-<label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
-<br><br>
-<label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
-<br><br>
-<input type="button" value="DODAWANIE" onclick="suma_gaj()">
-<input type="button" value="ODEJMOWANIE" onclick="roznica_gaj()">
-<input type="button" value="MNOŻENIE" onclick="iloczyn_gaj()">
-<input type="button" value="DZIELENIE" onclick="iloraz_gaj()">
-<input type="button" value="TEORIA-Gajewski" onclick="teoria_gaj()">
-<div id="wynik" style="margin-top:20px;"></div>
-<script>
-function suma_gaj()
-{
-var a = document.getElementById("a").value;
-var b = document.getElementById("b").value;
-if (a == "" || b == "")
-{
-document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
-} else
-{
-a = parseFloat(a);
-b = parseFloat(b);
-var suma = a + b;
-document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
-}
-//alert(a);
-//console.log(a);
-}
-function roznica_gaj()
-{
-var a = document.getElementById("a").value;
-var b = document.getElementById("b").value;
-if (a == "" || b == "")
-{
-document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
-} else
-{
-a = parseFloat(a);
-b = parseFloat(b);
-var roznica = a - b;
-document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica;
-}
-}
-function iloczyn_gaj()
-{
-var a = document.getElementById("a").value;
-var b = document.getElementById("b").value;
-if (a == "" || b == "")
-{
-document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
-} else
-{
-a = parseFloat(a);
-b = parseFloat(b);
-var iloczyn = a * b;
-document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn;
-}
-}
-function iloraz_gaj()
-{
-var a = document.getElementById("a").value;
-var b = document.getElementById("b").value;
-if (a == "" || b == "")
-{
-document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
-} else
-{
-a = parseFloat(a);
-b = parseFloat(b);
-if (b == 0)
-{
-document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
-}
-else
-{
-var iloraz = a / b;
-document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz;
-}
-}
-}
-function teoria_gaj()
-{
-document.write("<font color=green size=4>pierwsza linia teorii</font>"+"<br>");
-document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>label for=</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>");
-document.write("<font color=red size=4>Podaj pierwszą liczbę:</font>");
-document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>/label</font>"+"<font color=red size=4>&gt;</font>");
-document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>input type=</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>number</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4> id=</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>"+"<br>");
-document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
-document.write("<font color=red size=4>wykonanie numerycznego pola formularza z opisem 'Podaj pierwszą liczbę:' a nazwa pola to 'a' </font>"+"<br>");
-document.write("<font color=green size=4>druga linia teorii</font>"+"<br>");
-document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>input type=</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>button</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>");
-document.write("<font color=red size=4>value=</font>");
-document.write("<font color=red size=4>&quot;</font>"+"<font color=red size=4>DODAWANIE</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4> </font>"+"<font color=red size=4>onclick=</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>suma()</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4></font>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4></font>"+"<font color=red size=4>&gt;</font>"+"<br>");
-document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
-document.write("<font color=red size=4>Wykonanie przycisku o nazwie DODAWANIE i z takim samym napisem, kliknięcie myszką uruchamia funkcję suma(). </font>"+"<br>");
-document.write("<font color=green size=4>Trzecia linia teorii</font>"+"<br>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4>var a =</font>"+"<font color=red size=4></font>");
-document.write("<font color=red size=4> document.getElementById</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>");
-document.write("<font color=red size=4>(</font>");
-document.write("<font color=red size=4>&quot;</font>"+"<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4>)</font>"+"<font color=red size=4></font>");
-document.write("<font color=red size=4>.value;</font>"+"<font color=red size=4></font>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4></font>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4></font>"+"<font color=red size=4></font>"+"<br>");
-document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
-document.write("<font color=red size=4>Wpisanie do zmiennej 'a' wartości z elementu o Id 'a' (zbieżność nazw). </font>"+"<br>");
-document.write("<font color=green size=4>Czwarta linia teorii</font>"+"<br>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4>if (a==</font>"+"<font color=red size=4>&quot;&quot; </font>");
-document.write("<font color=red size=4> | | b == </font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>)</font>"+"<font color=red size=4></font>"+"<font color=red size=4></font>"+"<br>");
-document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
-document.write("<font color=red size=4>sprawdzenie czy pola 'a' lub 'b' są puste. </font>"+"<br>");
-document.write("<font color=green size=4>Piąta linia teorii</font>"+"<br>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4>document.getElementById(</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>wynik</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4></font>");
-document.write("<font color=red size=4>)</font>");
-document.write("<font color=red size=4>.innerHTML = </font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>Wynik działania wynosi: </font>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4></font>");
-document.write("<font color=red size=4> + suma;</font>"+"<font color=red size=4></font>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4></font>");
-document.write("<font color=red size=4></font>"+"<font color=red size=4></font>"+"<font color=red size=4></font>"+"<br>");
-document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
-document.write("<font color=red size=4>pobranie wartości Id o nazwie 'wynik' i wyprowadzenie w oknie przeglądarki tekstu 'Wynik działania wynosi: ' oraz wartości zmiennej suma;</font>"+"<br>");
+<div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+        var x = prompt("podaj argument x=", "");
+        var x_gaj = parseFloat(x);
+        document.write("wykonał Gajewski<br>");
+        document.write("czytany argument x=" + x_gaj.toFixed(2) + "<br>");
+        function f_gaj(x_gaj) {
+            if (x_gaj >= 2) { 
+                return 9; 
+            }
 
-}
+            else if (x_gaj >= 0 && x_gaj < 2) { 
+                return Math.pow(x_gaj, 3) + 1; 
+            }
 
-</script>
+            else if (x_gaj > -2 && x_gaj < 0) { 
+                return Math.pow(x_gaj + 1, 2); 
+            }
+
+            else { 
+                return 1; 
+            }
+        }
+
+        var wynik = f_gaj(x_gaj);
+        document.write("f(" + x_gaj.toFixed(2) + ")=" + wynik.toFixed(2) + "<br>");
+    </script>
+</div>
 </body>
 </html>
+<!-- Gajewski Z40_JS -->
