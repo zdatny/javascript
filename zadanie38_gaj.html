@@ -1,72 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>Zadanie 38 - Filip Gajewski</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z38_JS</title>
+    <style>
+        .a { color: red; font-size: 1cm; text-align: center; }
+        .b { color: green; font-size: 12mm; }
+        .c { color: blue; font-size: 50px; }
+        
+        #demo_gajewski {
+            color: red;
+            font-size: 40px;
+        }
+    </style>
 </head>
+<body>
+    <div class="a">Gajewski</div><br>
+    <div class="b"> Pojęcie rozdzielczość ekranu/monitora oznacza liczbę pikseli wyświetlanych na ekranie w poziomie i pionie</div><br>
+    <div class="c"> Pojęcie szerokość/wysokość ekranu przeglądarki w pikselach oznacza obszar roboczy wyświetlania strony. </div><br>
 
-<body style="background-color:silver;">
+    <p id="demo_gajewski"></p>
 
-<script>
+    <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        
+        var x = document.getElementById("demo_gajewski");
+        
+        x.innerHTML = "szerokość przeglądarki: " + w + ", wysokość: " + h + ".";
+ document.write("<font color=silver size=6>Twoja rozdzielczość ekranu to:</font>");
+ document.write("<font color=silver size=6>"+screen.width+"</font>");
+ document.write("<font color=silver size=6> na </font>");
+ document.write("<font color=silver size=6>"+screen.height+"</font>");
 
-// ===== DANE =====
-var imie_gaj = "Filip";
-var nazwisko_gaj = "Gajewski";
-var dzien_gaj = 29;
-var numer_gaj = 6;
-
-// ===== OBLICZENIA =====
-var liczba1_gaj = imie_gaj.length;          
-var liczba2_gaj = liczba1_gaj + 7;          
-var liczba3_gaj = nazwisko_gaj.length;      
-var liczba4_gaj = liczba3_gaj + 4;          
-
-var wielkosc_gaj = 40 + (numer_gaj % 7);    
-document.write("<div style='color:green; font-size:"+wielkosc_gaj+"px;'>");
-document.write(nazwisko_gaj + " " + imie_gaj + "<br>");
-document.write("liczba1 = " + liczba1_gaj + "<br>");
-document.write("liczba2 = " + liczba2_gaj + "<br>");
-document.write("liczba3 = " + liczba3_gaj + "<br>");
-document.write("liczba4 = " + liczba4_gaj + "<br>");
-document.write("</div><br><br>");
-
-document.write("<div style='color:red; font-size:"+wielkosc_gaj+"px;'>");
-document.write("MENU:<br>");
-document.write("5 - Teoria operatorów logicznych<br>");
-document.write("28 - Sprawdź czy liczba należy do przedziału ("+liczba1_gaj+" ; "+liczba2_gaj+"]<br>");
-document.write("79 - Sprawdź czy liczba należy do przedziału (-∞ ; "+liczba1_gaj+") lub ["+liczba2_gaj+" ; +∞)<br>");
-document.write("</div><br>");
-
-var opcja_gaj = prompt("Podaj numer opcji:");
-if(opcja_gaj == 5)
-{
- document.write("<font color=blue size=7>Jesteś w opcji 5 → teoria</font><br>");
- document.write("&& - i<br>");
- document.write("|| - lub<br>");
- document.write("! - zaprzeczenie<br>");
-}
-if(opcja_gaj == 28)
-{
- var liczba_gaj = prompt("Podaj liczbę:");
- if((liczba_gaj > liczba1_gaj) && (liczba_gaj <= liczba2_gaj))
-  document.write("<font color=green size=6>Liczba należy do przedziału</font>");
- else
-  document.write("<font color=red size=6>Liczba NIE należy do przedziału</font>");
-}
-if(opcja_gaj == 79)
-{
- var liczba2_gaj = prompt("Podaj liczbę:");
- if((liczba2_gaj < liczba1_gaj) || (liczba2_gaj >= liczba2_gaj))
-  document.write("<font color=green size=6>Liczba należy do przedziału</font>");
- else
-  document.write("<font color=red size=6>Liczba NIE należy do przedziału</font>");
-}
-if((opcja_gaj!=5)&&(opcja_gaj!=28)&&(opcja_gaj!=79))
-{
- document.write("<font color=red size=7>Nie ma takiej opcji</font>");
-}
-
-</script>
-
+    </script>
 </body>
 </html>
+<!-- Gajewski Z38_e4_JS -->
