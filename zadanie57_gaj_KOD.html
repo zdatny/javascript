@@ -1,0 +1,59 @@
+<html>
+<body>
+<textarea cols="90" rows="40">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Gajewski Z57_JS</title>   
+</head>
+<body>
+
+<script>
+
+    var l1_t_gaj;
+    do {
+        l1_t_gaj = parseInt(prompt("Podaj pierwszą liczbę (od 20 do 60):"));
+        if (isNaN(l1_t_gaj) || l1_t_gaj < 20 || l1_t_gaj > 60) {
+            alert("liczba l1 nie należy do przedziału <20,60>");
+        }
+    } while (isNaN(l1_t_gaj) || l1_t_gaj < 20 || l1_t_gaj > 60);
+
+    var l2_t_gaj;
+    do {
+        l2_t_gaj = parseInt(prompt("Podaj drugą liczbę (od 20 do 60):"));
+        if (isNaN(l2_t_gaj) || l2_t_gaj < 20 || l2_t_gaj > 60) {
+            alert("liczba l2 nie należy do przedziału <20,60>");
+        }
+    } while (isNaN(l2_t_gaj) || l2_t_gaj < 20 || l2_t_gaj > 60);
+
+    var pocz_gaj = parseInt(prompt("Podaj początkową wielkość tekstu:"));
+    var tekst_gaj = prompt("Podaj dowolny tekst:");
+
+    if (l1_t_gaj < l2_t_gaj) {
+        for (var i_gaj = pocz_gaj; ; i_gaj += 5) {
+            if (i_gaj > 100) {
+                break;
+            }
+            document.write("<p style=\"font-size:" + i_gaj + "px; color: black;\"><br>" + tekst_gaj + "<br></p>");
+        }
+    } 
+    else if (l2_t_gaj < l1_t_gaj) {
+        for (var i_gaj = pocz_gaj; ; i_gaj -= 5) {
+            if (i_gaj < 0) {
+                break;
+            }
+            document.write("<p style=\"font-size:" + i_gaj + "px; color: black;\"><br>" + tekst_gaj + "<br></p>");
+        }
+    } 
+    else {
+        document.write("<p style=\"font-size:" + pocz_gaj + "px; color: black;\"><br>" + tekst_gaj + "<br></p>");
+    }
+
+</script>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>
