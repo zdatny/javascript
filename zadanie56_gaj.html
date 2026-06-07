@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Gajewski Z56_JS</title>   
+</head>
+<body>
+
+<div style="font-size:20px; font-family:monospace; line-height: 1.0;">
+<script>
+
+    var imie_gaj = prompt("Podaj swoje imię:", "Jan");
+    var nazwisko_gaj = prompt("Podaj swoje nazwisko:", "Gajewski");
+
+    var liczba_liter_imienia_gaj = imie_gaj.length;
+    var liczba_liter_nazwiska_gaj = nazwisko_gaj.length;
+
+    var a_gaj = (liczba_liter_nazwiska_gaj % 4) + 5;
+    var b_gaj = (liczba_liter_imienia_gaj % 6) + 20;
+
+    for (var i_gaj = 1; i_gaj <= b_gaj; i_gaj++) {
+        document.write("*");
+    }
+    document.write("<br>");
+
+    for (var i_gaj = 1; i_gaj <= a_gaj - 2; i_gaj++) {
+        document.write("*");
+
+        for (var j_gaj = 1; j_gaj <= b_gaj - 2; j_gaj++) {
+            document.write("&nbsp;");
+        }
+
+        document.write("*<br>");
+    }
+
+    for (var i_gaj = 1; i_gaj <= b_gaj; i_gaj++) {
+        document.write("*");
+    }
+
+</script>
+</div>
