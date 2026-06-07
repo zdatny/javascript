@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Gajewski Z47_JS</title>   
+</head>
+<body>
+
+<script>
+
+    var liczba_gaj = parseInt(prompt("Podaj dowolną liczbę:"));
+
+    var koniec_petli_gaj = 10;
+    var wielkosc_liter_gaj = 42;
+
+    document.write("ilość wykonania pętli = " + koniec_petli_gaj + "<br>");
+    document.write("wielkość liter = " + wielkosc_liter_gaj + "px<br><br>");
+
+    if (liczba_gaj % 2 === 0) {
+        for (var i_gaj = 1; i_gaj <= koniec_petli_gaj; i_gaj++) {
+            document.write("<p style=\"font-size: " + wielkosc_liter_gaj + "px; color: blue;\">Gajewski</p>");
+        }
+    } 
+    else {
+        for (var i_gaj = 1; i_gaj <= koniec_petli_gaj; i_gaj++) {
+            document.write("<p style=\"font-size: " + wielkosc_liter_gaj + "px; color: green;\">Jan</p>");
+        }
+    }
+
+</script>
+
+</body>
+</html>
