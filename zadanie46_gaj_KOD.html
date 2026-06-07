@@ -1,0 +1,35 @@
+<html>
+<body>
+<textarea cols="90" rows="35">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Gajewski Z46_JS</title>   
+</head>
+<body>
+
+<script>
+
+    var koniec_petli_gaj = 10;
+    var wielkosc_liter_gaj = 42;
+
+    document.write("ilość wykonania pętli = " + koniec_petli_gaj + "<br>");
+    document.write("wielkość liter = " + wielkosc_liter_gaj + "px<br><br>");
+
+    for (var i_gaj = 1; i_gaj <= koniec_petli_gaj; i_gaj++) {
+        if (i_gaj % 2 !== 0) {
+            document.write("<p style=\"font-size: " + wielkosc_liter_gaj + "px;\">Gajewski</p>");
+        } 
+        else {
+            document.write("<p style=\"font-size: " + wielkosc_liter_gaj + "px;\">Jan</p>");
+        }
+    }
+
+</script>
+
+</body>
+</html>
+</textarea>
+</body>
+</html>
