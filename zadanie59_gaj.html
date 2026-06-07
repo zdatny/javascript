@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Gajewski Z59_JS</title>   
+</head>
+<body>
+
+<div style="font-size:20px; font-family:monospace;">
+<script>
+
+    var nr_dziennika_gaj = parseInt(prompt("Podaj Twój numer w dzienniku:"));
+    var koniec_gaj = nr_dziennika_gaj + 15;
+    var licznik_gaj = 0;
+
+    for (var i_gaj = nr_dziennika_gaj; i_gaj <= koniec_gaj; i_gaj++) {
+        var pierw_2_gaj = Math.sqrt(i_gaj);
+        var pierw_4_gaj = Math.sqrt(pierw_2_gaj);
+
+        document.write("l=" + i_gaj + "&nbsp;&nbsp;&nbsp;&nbsp;pierw_2(" + i_gaj + ")=" + pierw_2_gaj.toFixed(2) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pierw_4(" + i_gaj + ")=" + pierw_4_gaj.toFixed(2) + "<br>");
+        
+        licznik_gaj++;
+
+        if (licznik_gaj % 3 === 0 && i_gaj < koniec_gaj) {
+            confirm("Aby kontynuować, kliknij OK");
+        }
+    }
+
+</script>
+</div>
+
+</body>
+</html>

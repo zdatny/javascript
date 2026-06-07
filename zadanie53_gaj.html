@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Gajewski Z53_JS</title>   
+</head>
+<body>
+
+<div style="font-size:20px; font-family:monospace;">
+<script>
+
+    var ile_gaj = parseInt(prompt("ile razy powtórzyć="));
+    var tekst_gaj = prompt("podaj twoje inicjały=");
+
+    for (var i_gaj = 1; i_gaj <= ile_gaj; i_gaj++) {
+        
+        for (var j_gaj = 1; j_gaj < i_gaj; j_gaj++) {
+            document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        }
+
+        document.write(i_gaj + "_" + tekst_gaj + "_" + i_gaj + "<br>");
+    }
+
+</script>
+</div>
+
+</body>
+</html>
